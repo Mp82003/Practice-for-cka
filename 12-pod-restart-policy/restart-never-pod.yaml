@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: restart-never-pod
+spec:
+  restartPolicy: Never
+  containers:
+    - name: restart-never-pod
+      image: busybox:latest
+      command: ["sh", "-c", "echo CKA-practice; sleep 20"]
