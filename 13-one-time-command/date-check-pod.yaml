@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: date-check
+spec:
+  restartPolicy: Never
+  containers:
+    - name: date-check
+      image: busybox:latest
+      command: ["sh", "-c", "date"]
