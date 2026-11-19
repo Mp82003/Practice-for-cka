@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: workdir-demo
+spec:
+   restartPolicy: Never
+   containers:
+   - name: workdir-demo
+     image: busybox:latest
+     workingDir: /work
+     command: ["sh","-c","pwd"]
